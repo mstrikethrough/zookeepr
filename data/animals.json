@@ -144,6 +144,17 @@
         "hungry"
       ],
       "id": "18"
+    },
+    {
+      "name": "vcsd",
+      "species": "csdcsdc",
+      "diet": "folivore",
+      "personalityTraits": [
+        "hungry",
+        "zany",
+        "anxious"
+      ],
+      "id": "19"
     }
   ]
 }
