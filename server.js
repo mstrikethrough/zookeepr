@@ -1,6 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 const express = require('express');
+const { animals } = require('./data/animals');
+
 const PORT = process.env.PORT || 3001;
 const app = express();
 
@@ -9,8 +11,8 @@ app.use(express.urlencoded({ extended: true }));
 // parse incoming JSON data
 app.use(express.json());
 
-const { animals } = require('./data/animals');
-const { type } = require('os');
+// dunno what this (below) is...
+// const { type } = require('os');
 
 
 function filterByQuery(query, animalsArray) {
@@ -96,7 +98,7 @@ app.get('/api/animals/:id', (req, res) => {
   if (result) {
     res.json(result);
   } else {
-    res.sendStatus(404);
+    res.send(404);
   }  
 });
 
